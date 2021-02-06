@@ -1,12 +1,12 @@
-﻿@model IEnumerable<Patient_Record.Areas.Patient_Settings.Models.Patient>
+﻿@model IEnumerable<Patient_Record.Areas.Patient_Settings.ViewModel.PatientList>
 
 @{
     ViewBag.TITLE = "Patient List";
 }
 
-<div class="col-12">
+<div class="col-12 right">
     <p class="btn btn-bg-success">
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Add New Patient", "Create")
     </p>
     <table class="table">
         <thead>
@@ -18,42 +18,39 @@
                     @Html.DisplayNameFor(model => model.Patient_Name)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Patient_Official_ID)
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.Patient_DOB)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Patient_Email)
+                    @Html.DisplayNameFor(model => model.Patient_Record_Id)
                 </th>
-                <th></th>
+                <th>
+                    Actions
+                </th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (PatientList item in ViewBag.patientList)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Official_ID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Patient_DOB)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Email)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @item.Patient_Id
+                </td>
+                <td>
+                    @item.Patient_Name
+                </td>
+                <td>
+                    @item.Patient_DOB
+                </td>
+                <td>
+                    @item.Patient_Record_Id
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Patient_Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Patient_Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Patient_Id })
+                </td>
+            </tr>
             }
         </tbody>
     </table>

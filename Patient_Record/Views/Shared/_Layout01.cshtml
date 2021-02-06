@@ -19,24 +19,27 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta name="description" content="Updates and statistics" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--begin::Fonts-->
-    <link  href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
-    <link href="~/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css"  />
+    <link href="~/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Page Vendors Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
-    <link href="~/assets/plugins/global/plugins.bundle.css" />
-    <link href="~/assets/plugins/custom/prismjs/prismjs.bundle.css"  type="text/css" />
-    <link href="~/assets/css/style.bundle.css"  type="text/css" />
+    <link href="~/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
-    <link href="~/assets/css/themes/layout/header/base/light.css"  type="text/css" />
-    <link href="~/assets/css/themes/layout/header/menu/light.css"  type="text/css" />
-    <link href="~/assets/css/themes/layout/brand/dark.css"  type="text/css" />
-    <link href="~/assets/css/themes/layout/aside/dark.css"  type="text/css" />
-    <link href="~/css/site.css"  type="text/css" />
+    <link href="~/assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="~/assets/media/logos/favicon.ico" />
+    
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -46,7 +49,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
         <a href="index.html">
-            @*<img alt="Logo" src="~/assets/media/logos/PatientLogo.png" />*@
+            <img alt="Logo" src="~/assets/media/logos/PatientLogo.png" class="logoImage"/>
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -88,8 +91,8 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--begin::Brand-->
                 <div class="brand flex-column-auto" id="kt_brand">
                     <!--begin::Logo-->
-                    <h3 href="index.html" class="brand-logo">
-                        <img alt="Logo" src="~/assets/media/logos/patientLogo.png" id="logoImage"/>
+                    <h3 href="/" class="brand-logo">
+                        <img alt="Logo" src="~/assets/media/logos/patientLogo.png" class="logoImage"/>
                     </h3>
                     <!--end::Logo-->
                     <!--begin::Toggle-->
@@ -116,7 +119,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!--begin::Menu Nav-->
                         <ul class="menu-nav">
                             <li class="menu-item menu-item-active" aria-haspopup="true">
-                                <a href="index.html" class="menu-link">
+                                <a href="/" class="menu-link">
                                     <span class="svg-icon menu-icon">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -160,45 +163,45 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </span>
                                         </li>
                                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                            <a href="javascript:;" class="menu-link menu-toggle">
+                                            <a href="/Patient_Settings/Patient/Create" class="menu-link menu-toggle">
                                                 <i class="menu-bullet menu-bullet-line">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">Patient</span>
+                                                <span class="menu-text">Add Patient</span>
                                             </a>
-                                          
+
                                         </li>
                                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                            <a href="javascript:;" class="menu-link menu-toggle">
+                                            <a href="/Patient_Settings/Patient/Index" class="menu-link menu-toggle">
                                                 <i class="menu-bullet menu-bullet-line">
                                                     <span></span>
                                                 </i>
                                                 <span class="menu-text">Patient List</span>
                                             </a>
-                                          
+
                                         </li>
                                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                            <a href="javascript:;" class="menu-link menu-toggle">
+                                            <a href="/Patient_Settings/Patient/Statistics" class="menu-link menu-toggle">
                                                 <i class="menu-bullet menu-bullet-line">
                                                     <span></span>
                                                 </i>
                                                 <span class="menu-text">Patient Statistics</span>
                                             </a>
-                                          
+
                                         </li>
                                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                            <a href="javascript:;" class="menu-link menu-toggle">
+                                            <a href="/Patient_Settings/Patient_Record/Create" class="menu-link menu-toggle">
                                                 <i class="menu-bullet menu-bullet-line">
                                                     <span></span>
                                                 </i>
                                                 <span class="menu-text">Patient Record</span>
                                             </a>
-                                          
+
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                          
+
                         </ul>
                         <!--end::Menu Nav-->
                     </div>
@@ -223,7 +226,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <a class="menu-toggle">
                                             <span class="menu-text">@ViewBag.TITLE</span>
                                         </a>
-                                   
+
                                     </li>
                                 </ul>
                                 <!--end::Header Nav-->
@@ -858,7 +861,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!--end::Dropdown-->
                             </div>
                             <!--end::Quick Actions-->
-                           
                             <!--begin::Languages-->
                             <div class="dropdown">
                                 <!--begin::Toggle-->
@@ -954,6 +956,11 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!--end::Container-->
                     </div>
                     <!--end::Entry-->
+                    <div class="d-flex flex-column-fluid">
+                        <!--begin::Container-->
+                        @RenderSection("Scripts", required:false)
+                        <!--end::Container-->
+                    </div>
                 </div>
                 <!--end::Content-->
                 <!--begin::Footer-->
@@ -963,7 +970,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!--begin::Copyright-->
                         <div class="text-dark order-2 order-md-1">
                             <span class="text-muted font-weight-bold mr-2">2021</span>
-                            <a href="" target="_blank" class="text-dark-75 text-hover-primary">Keenthemes</a>
+                            <a href="" target="_blank" class="text-dark-75 text-hover-primary">Mohammad Hamayel</a>
                         </div>
                         <!--end::Copyright-->
                         <!--begin::Nav-->
@@ -1246,7 +1253,6 @@ License: You must have a valid license purchased only from themeforest(the above
         <!--end::Content-->
     </div>
     <!-- end::User Panel-->
-
     <!--begin::Chat Panel-->
     <div class="modal modal-sticky modal-sticky-bottom-right" id="kt_chat_modal" role="dialog" data-backdrop="false">
         <div class="modal-dialog" role="document">
@@ -1558,7 +1564,6 @@ License: You must have a valid license purchased only from themeforest(the above
     </ul>
     <!--end::Sticky Toolbar-->
     <!--begin::Demo Panel-->
-    
     <!--end::Demo Panel-->
     <script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script>
     <!--begin::Global Config(global config for global JS scripts)-->

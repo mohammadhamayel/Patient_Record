@@ -1,7 +1,35 @@
 ﻿
-#logoImage{
-    height:50px;
+.logoImage {
+    height: 50px;
 }
+
 .btn-bg-success a{
     color: white;
+}
+
+@media (min-width: 992px) {
+    .header-fixed.subheader-fixed.subheader-enabled .wrapper {
+         padding-top: 50px;
+    }
+}
+
+table thead tr {
+    color: #ecebeb;
+    background-color: #5e5b8e;
+}
+
+.paddingLeft20 {
+    padding-left: 20px;
+}
+.margin0{
+    margin:0;
+}
+.padding30-20 {
+    padding: 30px 20px;
+}
+.right{
+    text-align:right;
+}
+.paddingRight5{
+    padding-right:5%;
 }

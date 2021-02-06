@@ -1,0 +1,56 @@
+﻿@model Patient_Record.Areas.Patient_Settings.Models.Patient
+
+@{
+    ViewBag.Title = "Edit";
+
+}
+
+<div class="col-12">
+    <div class="row justify-content-end margin0 paddingRight5">
+        <span class="btn btn-bg-success">
+            <a asp-action="Index">Back to List</a>
+        </span>
+    </div>
+    <div class="row margin0">
+        <div class="col-12">
+            <form asp-action="Edit" class="row margin0 justify-content-center">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Patient_Id" class="control-label"></label>
+                    <input asp-for="Patient_Id" class="form-control" readonly/>
+                    <span asp-validation-for="Patient_Id" class="text-danger"></span>
+                </div>
+                <div class="form-group col-5">
+                    <label asp-for="Patient_Name" class="control-label"></label>
+                    <input asp-for="Patient_Name" class="form-control" />
+                    <span asp-validation-for="Patient_Name" class="text-danger"></span>
+                </div>
+                <div class="form-group col-5">
+                    <label asp-for="Patient_Official_ID" class="control-label"></label>
+                    <input asp-for="Patient_Official_ID" class="form-control" />
+                    <span asp-validation-for="Patient_Official_ID" class="text-danger"></span>
+                </div>
+                <div class="form-group col-5">
+                    <label asp-for="Patient_DOB" class="control-label"></label>
+                    <input asp-for="Patient_DOB" class="form-control" />
+                    <span asp-validation-for="Patient_DOB" class="text-danger"></span>
+                </div>
+                <div class="form-group col-5">
+                    <label asp-for="Patient_Email" class="control-label"></label>
+                    <input asp-for="Patient_Email" class="form-control" />
+                    <span asp-validation-for="Patient_Email" class="text-danger"></span>
+                </div>
+                <div class="form-group col-10">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -9,5 +9,6 @@ namespace Patient_Record.Areas.Patient_Settings.ViewModel
     public class PatientDetailsViewModel
     {
         public Patient Patient { get; set; }
+        public Patient_Records Patient_Records { get; set; }
     }
 }

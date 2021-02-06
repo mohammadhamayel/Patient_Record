@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\msi\\source\\repos\\Patient_Record\\Patient_Record\\Patient_Record.csproj": {}
+    "C:\\Users\\msi\\Documents\\Patient_Record\\Patient_Record\\Patient_Record\\Patient_Record.csproj": {}
   },
   "projects": {
-    "C:\\Users\\msi\\source\\repos\\Patient_Record\\Patient_Record\\Patient_Record.csproj": {
+    "C:\\Users\\msi\\Documents\\Patient_Record\\Patient_Record\\Patient_Record\\Patient_Record.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\msi\\source\\repos\\Patient_Record\\Patient_Record\\Patient_Record.csproj",
+        "projectUniqueName": "C:\\Users\\msi\\Documents\\Patient_Record\\Patient_Record\\Patient_Record\\Patient_Record.csproj",
         "projectName": "Patient_Record",
-        "projectPath": "C:\\Users\\msi\\source\\repos\\Patient_Record\\Patient_Record\\Patient_Record.csproj",
+        "projectPath": "C:\\Users\\msi\\Documents\\Patient_Record\\Patient_Record\\Patient_Record\\Patient_Record.csproj",
         "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\msi\\source\\repos\\Patient_Record\\Patient_Record\\obj\\",
+        "outputPath": "C:\\Users\\msi\\Documents\\Patient_Record\\Patient_Record\\Patient_Record\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,10 +42,15 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.TagHelpers": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -83,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

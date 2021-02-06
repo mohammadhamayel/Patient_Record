@@ -1,0 +1,61 @@
+﻿@model Patient_Record.Areas.Patient_Settings.ViewModel.PatientDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="col-12">
+    <div class="row justify-content-center margin0">
+        <div class="col-10">
+            <h4>Patient Record Details</h4>
+            <hr />
+            <dl class="row margin0">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Patient_Records.Patient_Record_Id)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Patient_Records.Patient_Record_Id)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Patient_Records.Patient_Id)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Patient_Records.Patient_Id)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Patient_Records.Disease_Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Patient_Records.Disease_Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Patient_Records.Time_Of_Entry)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Patient_Records.Time_Of_Entry)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Patient_Records.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Patient_Records.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Patient_Records.Bill)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Patient_Records.Bill)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-10 center">
+            <span class="btn bg-dark-75-o-85">
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Patient_Records.Patient_Record_Id })
+            </span>
+            <span class="padding30-20"></span>
+            <span class="btn btn-bg-success">
+                <a asp-action="Index">Go to List</a>
+            </span>
+        </div>
+    </div>
+</div>

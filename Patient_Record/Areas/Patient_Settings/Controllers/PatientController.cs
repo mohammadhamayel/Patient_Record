@@ -17,21 +17,22 @@ namespace Patient_Record.Areas.Patient_Settings.Controllers
         }
         public ViewResult Index()
         {
-            var model = _patientRepository.GetAllPatient();
-            return View(model);
+            //ViewBag.PatientList
+             ViewBag.patientList = _patientRepository.PatientList();
+            
+            return View();
         }
 
          public ViewResult Details(int id)
-        {
+         {
             PatientDetailsViewModel patientDetailsViewModel = new PatientDetailsViewModel()
             {
                 Patient = _patientRepository.GetPatient(id)
             };
             return View(patientDetailsViewModel);
-        }
+         }
 
 
-        [HttpGet]
         public IActionResult Create()
         {
             return View();
@@ -42,10 +43,38 @@ namespace Patient_Record.Areas.Patient_Settings.Controllers
             if (ModelState.IsValid)
             {
                 Patient newPatient = _patientRepository.Add(patient);
+                return RedirectToAction("details", new { id = newPatient.Patient_Id });
             }
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                Patient newPatient = _patientRepository.Delete(id);
+            }
+            return View("Index");
+        }
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var model = _patientRepository.GetPatient(id);
 
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Patient patient)
+        {
+            if (ModelState.IsValid)
+            {
+                _patientRepository.Update(patient);
+            }
+            return RedirectToAction("Index");
+        }
+
+        
     }
 }
