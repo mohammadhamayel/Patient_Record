@@ -43,5 +43,5 @@ From the sidebar click on Patient List tab to render the patients List and you c
 <h3> Patient Statisticals </h3>
 You can display the patients staticals when click on Patient Statistics tab to shaw the report of patients
 
-![alt text](https://github.com/mohammadhamayel/InventoryManagement/blob/master/github_images/MainPage.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientListTab.PNG)
 
