@@ -16,24 +16,29 @@ The busness logic based on saveing patient records in the hospital
 
 First add new patient and fill his information
 
-![alt text](https://github.com/mohammadhamayel/InventoryManagement/blob/master/github_images/MainPage.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/addPatient.PNG)
 
 Here is the list of created patient nad you can display the patient details or edit his information by action buttons
 
-![alt text](https://github.com/mohammadhamayel/InventoryManagement/blob/master/github_images/MainPage.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientEdit.PNG)
+
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientList.PNG)
+
 
 then you can add a new record for any added patients by clicking on Add patient record tab in sidebar 
 
-![alt text](https://github.com/mohammadhamayel/InventoryManagement/blob/master/github_images/MainPage.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/AddPatientRecord.PNG)
 
 This is the list of all records you have entered and You can edit or view record details using action buttons
 
-![alt text](https://github.com/mohammadhamayel/InventoryManagement/blob/master/github_images/MainPage.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientRecordList.PNG)
+
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientRecordEdit.PNG)
 
 <h3> Patient List </h3>
 From the sidebar click on Patient List tab to render the patients List and you can edit patient information by clicking on action buttons
 
-![alt text](https://github.com/mohammadhamayel/InventoryManagement/blob/master/github_images/MainPage.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientListTab.PNG)
 
 <h3> Patient Statisticals </h3>
 You can display the patients staticals when click on Patient Statistics tab to shaw the report of patients
