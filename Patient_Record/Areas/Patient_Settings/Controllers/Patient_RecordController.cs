@@ -32,7 +32,7 @@ namespace Patient_Record.Areas.Patient_Settings.Controllers
             if (ModelState.IsValid)
             {
                 Patient_Records newPatient = _patientRepository.Add(patient);
-                return RedirectToAction("details", new { id = newPatient.Patient_Id });
+                return RedirectToAction("details", new { id = newPatient.Patient_Record_Id });
             }
             return RedirectToAction("Create");
         }

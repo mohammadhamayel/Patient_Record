@@ -121,7 +121,7 @@ namespace Patient_Record.Areas.Patient_Settings.Models
                              Patient_Id = patient.Patient_Id,
                              Patient_Name = patient.Patient_Name,
                              Patient_DOB = patient.Patient_DOB,
-                             Patient_Record_Id = records.Patient_Record_Id
+                             Patient_Bills = records.Bill
                          };
             List<PatientStatistics> patientStatistics = new List<PatientStatistics>();
 
