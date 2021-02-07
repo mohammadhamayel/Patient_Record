@@ -78,7 +78,7 @@ namespace Patient_Record.Areas.Patient_Settings.Controllers
         public ViewResult Statistics()
         {
             //ViewBag.PatientList
-            ViewBag.patientList = _patientRepository.PatientStatistics();
+            ViewBag.statisticsList = _patientRepository.PatientStatistics();
 
             return View();
         }

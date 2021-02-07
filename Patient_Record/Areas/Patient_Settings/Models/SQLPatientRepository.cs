@@ -141,20 +141,24 @@ WHERE MyDerivedTable.RowNum = 5;*/
                 patient.Patient_Name = res.Patient_Name;
                 patient.Patient_Id = res.Patient_Id;
                 patient.Patient_Age = res.Patient_DOB.ToString();
-               /* var q1 = from p1 in context.Patients
-                         join r1 in context.GetPatient_Records on p1.Patient_Id equals r1.Patient_Id
-                         group new { p1, r1 } by new { p1.Patient_Name, p1.Patient_Id, p1.Patient_DOB } into pg
-                         let patientGroup = pg.FirstOrDefault()
-                         let pati = patientGroup.p1
-                         let rec = patientGroup.r1
-                         let avg = pg.Average(m => m.r1.Bill)
-                         select new
-                         {
-                             Patient_Id = pati.Patient_Id,
-                             Patient_Name = pati.Patient_Name,
-                             Patient_DOB = pati.Patient_DOB,
-                             Patient_Bills = avg
-                         };*/
+                /* var q1 = from p1 in context.Patients
+                          join r1 in context.GetPatient_Records on p1.Patient_Id equals r1.Patient_Id
+                          group new { p1, r1 } by new { p1.Patient_Name, p1.Patient_Id, p1.Patient_DOB } into pg
+                          let patientGroup = pg.FirstOrDefault()
+                          let pati = patientGroup.p1
+                          let rec = patientGroup.r1
+                          let avg = pg.Average(m => m.r1.Bill)
+                          select new
+                          {
+                              Patient_Id = pati.Patient_Id,
+                              Patient_Name = pati.Patient_Name,
+                              Patient_DOB = pati.Patient_DOB,
+                              Patient_Bills = avg
+                          };*/
+                patient.Patient_Avg_Bills = 50;
+                patient.Patient_Avg_Bills_Outlier = 52;
+                patient.Patient_5th_Record = 0;
+                patient.Months_Visit = "March";
                 patientStatistics.Add(patient);
             }
 

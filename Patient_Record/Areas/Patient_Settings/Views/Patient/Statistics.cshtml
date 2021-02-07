@@ -29,38 +29,32 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Months_Visit)
                 </th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (PatientStatistics item in ViewBag.statisticsListel)
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Name)
+                        @item.Patient_Name 
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Age)
+                        @item.Patient_Age 
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Avg_Bills)
+                        @item.Patient_Avg_Bills
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Avg_Bills_Outlier)
+                        @item.Patient_Avg_Bills_Outlier
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Patient_5th_Record)
+                        @item.Patient_5th_Record
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Patient_Similars)
+                        @item.Patient_Similars
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Months_Visit)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        @item.Months_Visit
                     </td>
                 </tr>
             }
