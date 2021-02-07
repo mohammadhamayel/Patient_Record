@@ -75,6 +75,13 @@ namespace Patient_Record.Areas.Patient_Settings.Controllers
             return RedirectToAction("Index");
         }
 
-        
+        public ViewResult Statistics()
+        {
+            //ViewBag.PatientList
+            ViewBag.patientList = _patientRepository.PatientStatistics();
+
+            return View();
+        }
+
     }
 }

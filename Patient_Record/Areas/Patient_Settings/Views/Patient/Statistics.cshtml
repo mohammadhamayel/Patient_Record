@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Patient_Record.Areas.Patient_Settings.ViewModel.PatientStatistics>
+
+@{
+    ViewData["Title"] = "Statistics";
+}
+
+<div class="col-12">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient_Age)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient_Avg_Bills)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient_Avg_Bills_Outlier)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient_5th_Record)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient_Similars)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Months_Visit)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Patient_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Patient_Age)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Patient_Avg_Bills)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Patient_Avg_Bills_Outlier)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Patient_5th_Record)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Patient_Similars)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Months_Visit)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

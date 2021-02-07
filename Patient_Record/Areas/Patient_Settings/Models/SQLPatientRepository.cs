@@ -111,19 +111,52 @@ namespace Patient_Record.Areas.Patient_Settings.Models
             }
             return patientLists;
         }
-
         public List<PatientStatistics> PatientStatistics()
         {
             var result = from patient in context.Patients
-                         join records in context.GetPatient_Records on patient.Patient_Id equals records.Patient_Id
+                         join records in context.GetPatient_Records on patient.Patient_Id equals records.Patient_Id                         
+                         group new { patient, records } by new { patient.Patient_Name,patient.Patient_Id,patient.Patient_DOB } into pg
+                         let patientGroup = pg.FirstOrDefault()
+                         let pati = patientGroup.patient
+                         let rec = patientGroup.records
+                         let avg = pg.Average(m => m.records.Bill)
+                         select new 
+                         {
+                             Patient_Id = pati.Patient_Id,
+                             Patient_Name = pati.Patient_Name,
+                             Patient_DOB = pati.Patient_DOB,
+                             Patient_Bills = avg
+                         };
+            /*SELECT Patient_Record_Id
+FROM(
+    SELECT Patient_Record_Id, ROW_NUMBER() OVER(ORDER BY Patient_Record_Id) AS RowNum
+    FROM GetPatient_Records join Patients on Patients.Patient_Id = GetPatient_Records.Patient_Id
+    where GetPatient_Records.Patient_Id = 3
+) AS MyDerivedTable
+WHERE MyDerivedTable.RowNum = 5;*/
+            List<PatientStatistics> patientStatistics = new List<PatientStatistics>();
+            foreach (var res in result)
+            {
+                PatientStatistics patient = new PatientStatistics();
+                patient.Patient_Name = res.Patient_Name;
+                patient.Patient_Id = res.Patient_Id;
+                patient.Patient_Age = res.Patient_DOB.ToString();
+               /* var q1 = from p1 in context.Patients
+                         join r1 in context.GetPatient_Records on p1.Patient_Id equals r1.Patient_Id
+                         group new { p1, r1 } by new { p1.Patient_Name, p1.Patient_Id, p1.Patient_DOB } into pg
+                         let patientGroup = pg.FirstOrDefault()
+                         let pati = patientGroup.p1
+                         let rec = patientGroup.r1
+                         let avg = pg.Average(m => m.r1.Bill)
                          select new
                          {
-                             Patient_Id = patient.Patient_Id,
-                             Patient_Name = patient.Patient_Name,
-                             Patient_DOB = patient.Patient_DOB,
-                             Patient_Bills = records.Bill
-                         };
-            List<PatientStatistics> patientStatistics = new List<PatientStatistics>();
+                             Patient_Id = pati.Patient_Id,
+                             Patient_Name = pati.Patient_Name,
+                             Patient_DOB = pati.Patient_DOB,
+                             Patient_Bills = avg
+                         };*/
+                patientStatistics.Add(patient);
+            }
 
             return patientStatistics;
         }

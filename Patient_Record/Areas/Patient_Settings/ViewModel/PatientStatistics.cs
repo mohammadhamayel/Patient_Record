@@ -7,6 +7,7 @@ namespace Patient_Record.Areas.Patient_Settings.ViewModel
 {
     public class PatientStatistics
     {
+        public int Patient_Id { get; set; }
         public string Patient_Name { get; set; }
         public string Patient_Age { get; set; }
         public string Patient_Avg_Bills { get; set; }
