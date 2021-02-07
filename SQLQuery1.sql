@@ -45,3 +45,4 @@ where Patient_Id = 3
 group by MONTH(Patient_DOB),Patient_Id
 ) as mCnt
 where mCnt.roworder = 1
+
