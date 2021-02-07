@@ -31,7 +31,7 @@ then you can add a new record for any added patients by clicking on Add patient 
 
 This is the list of all records you have entered and You can edit or view record details using action buttons
 
-![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientRecordList.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientStatistics.PNG)
 
 ![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientRecordEdit.PNG)
 
