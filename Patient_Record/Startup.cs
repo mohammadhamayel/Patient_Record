@@ -45,8 +45,8 @@ namespace Patient_Record
             services.AddMvc().AddXmlSerializerFormatters();
             services.AddScoped<IPatientRepository, SQLPatientRepository>();
 
-            /*services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-             .AddCookie(o => o.LoginPath = new PathString("/Permissions/Auth/login"));*/
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+             .AddCookie(o => o.LoginPath = new PathString("/Permissions/Auth/login"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -79,6 +79,11 @@ namespace Patient_Record
                 name: "MyAreaPatient_Settings",
                 areaName: "Patient_Settings",
                 pattern: "Patient_Settings/{controller=Patient}/{action=Index}/{id?}");
+
+               endpoints.MapAreaControllerRoute(
+               name: "MyAreaPermissions",
+               areaName: "Permissions",
+               pattern: "Permissions/{controller=Auth}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(
                     name: "default",

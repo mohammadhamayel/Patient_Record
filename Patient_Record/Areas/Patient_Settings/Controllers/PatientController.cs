@@ -1,19 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Patient_Record.Areas.Patient_Settings.Models;
 using Patient_Record.Areas.Patient_Settings.ViewModel;
+using Patient_Record.Models;
 
 namespace Patient_Record.Areas.Patient_Settings.Controllers
 {
     public class PatientController : Controller
     {
         private readonly IPatientRepository _patientRepository;
-        public PatientController(IPatientRepository patientRepository)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public PatientController(IPatientRepository patientRepository, IHttpContextAccessor httpContextAccessor)
         {
             _patientRepository = patientRepository;
+            _httpContextAccessor = httpContextAccessor;
+            new PermissionsAttribute(_httpContextAccessor);
+
         }
         public ViewResult Index()
         {

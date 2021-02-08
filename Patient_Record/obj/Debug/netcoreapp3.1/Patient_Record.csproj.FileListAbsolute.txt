@@ -342,3 +342,4 @@ C:\Users\msi\Documents\Patient_Record\Patient_Record\Patient_Record\obj\Debug\ne
 C:\Users\msi\Documents\Patient_Record\Patient_Record\Patient_Record\obj\Debug\netcoreapp3.1\Razor\Areas\Patient_Settings\Views\Patient_Record\Details.cshtml.g.cs
 C:\Users\msi\Documents\Patient_Record\Patient_Record\Patient_Record\obj\Debug\netcoreapp3.1\Patient_Record.csprojAssemblyReference.cache
 C:\Users\msi\Documents\Patient_Record\Patient_Record\Patient_Record\obj\Debug\netcoreapp3.1\Razor\Areas\Patient_Settings\Views\Patient\Statistics.cshtml.g.cs
+C:\Users\msi\Documents\Patient_Record\Patient_Record\Patient_Record\obj\Debug\netcoreapp3.1\Razor\Areas\Permissions\Views\Auth\login.cshtml.g.cs
