@@ -31,7 +31,7 @@ then you can add a new record for any added patients by clicking on Add patient 
 
 This is the list of all records you have entered and You can edit or view record details using action buttons
 
-![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientRecordList.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientStatistics.PNG)
 
 ![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientRecordEdit.PNG)
 
@@ -43,5 +43,5 @@ From the sidebar click on Patient List tab to render the patients List and you c
 <h3> Patient Statisticals </h3>
 You can display the patients staticals when click on Patient Statistics tab to shaw the report of patients
 
-![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientListTab.PNG)
+![alt text](https://github.com/mohammadhamayel/Patient_Record/blob/main/Images/PatientStatistics.PNG)
 
